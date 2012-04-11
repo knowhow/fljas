@@ -11,4 +11,4 @@ if ! test -f "$chef_binary"; then
         gem1.9.1 install --no-rdoc --no-ri chef --version 0.10.0
 fi &&
 
-chef --version
+chef-solo --version
