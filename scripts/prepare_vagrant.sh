@@ -1,14 +1,14 @@
 #!/bin/bash
 
-#apt-get install -y vim
-#apt-get remove vim-tiny
+apt-get install -y vim
+apt-get remove vim-tiny
 
 #aptitude install -y ruby1.9.1 ruby1.9.1-dev make &&         sudo gem1.9.1 install --no-rdoc --no-ri chef --version 0.10.0
 
 # Setup sudo to allow no-password sudo for "admin"
-#cp /etc/sudoers /etc/sudoers.orig
-#sed -i -e '/Defaults\s\+env_reset/a Defaults\texempt_group=admin' /etc/sudoers
-#sed -i -e 's/%admin ALL=(ALL) ALL/%admin ALL=NOPASSWD:ALL/g' /etc/sudoers
+cp /etc/sudoers /etc/sudoers.orig
+sed -i -e '/Defaults\s\+env_reset/a Defaults\texempt_group=adm' /etc/sudoers
+sed -i -e 's/%admin ALL=(ALL) ALL/%adm ALL=NOPASSWD:ALL/g' /etc/sudoers
 
 
 useradd vagrant -m
